@@ -21,7 +21,7 @@ We can get q = 30
 running time = 0.0004270000000000003
 ```
 
-## Top-Down With Memoization(not DP)
+## Top-Down With Memoization
 
 the [DP_memoized_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_memoized_cut_rod.py) implement the recursion of the cut-rod problem
 
@@ -29,7 +29,6 @@ the [DP_memoized_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algo
  def memoized_cut_rod(p, n):
     # r = [float("-inf") for _ in range(n+1)]
     r = [-1 for _ in range(n + 1)]
-
     return memoized_cut_rod_aux(p, n, r)
 
 
@@ -52,3 +51,6 @@ When n = 10
 We can get q = 30
 running time t = 3.500000000000031e-05
 ```
+
+## Bottom-up Method
+
