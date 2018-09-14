@@ -18,7 +18,7 @@ def cut_rod(p, n):
  ```python
 When n = 10
 We can get q = 30
-running time = 0.0004270000000000003
+running time t = 4.360000e-04
 ```
 
 ## Top-Down With Memoization
@@ -49,7 +49,7 @@ def memoized_cut_rod_aux(p, n, r):
  ```python
 When n = 10
 We can get q = 30
-running time t = 3.500000000000031e-05
+running time t = 3.600000e-05
 ```
 
 ## Bottom-up Method
