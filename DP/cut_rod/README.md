@@ -105,6 +105,5 @@ def print_cut_rod_solution(p, n):
 When n = 10
 We can get q = 30
 running time t = 2.500000e-05
-3
-6
+10
 ```
