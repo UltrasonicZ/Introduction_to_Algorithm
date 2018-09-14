@@ -54,3 +54,23 @@ running time t = 3.600000e-05
 
 ## Bottom-up Method
 
+the [DP_bottom_up_method.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_bottom_up_method.py) implement the recursion of the cut-rod problem
+
+ ```python
+def bottom_up_cut_rod(p, n):
+    r = [-1 for _ in range(n+1)]
+    r[0] = 0
+    for j in range(1, n+1):
+        # q = float("-inf")
+        q = -1
+        for i in range(1, j+1):
+            q = max(q, p[i-1] + r[j-i])
+        r[j] = q
+    return r[n]
+```
+
+ ```python
+When n = 10
+We can get q = 30
+running time t = 2.500000e-05
+```
