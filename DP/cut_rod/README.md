@@ -1,6 +1,6 @@
 Cut-Rod Problem
 ================================================================
-## Top-Down Recursion
+## Top-Down Recursion(not DP)
 
 the [DP_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_cut_rod.py) implement the recursion of the cut-rod problem
 
@@ -19,4 +19,36 @@ def cut_rod(p, n):
 When n = 10
 We can get q = 30
 running time = 0.0004270000000000003
+```
+
+## Top-Down With Memoization(not DP)
+
+the [DP_memoized_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_memoized_cut_rod.py) implement the recursion of the cut-rod problem
+
+ ```python
+ def memoized_cut_rod(p, n):
+    # r = [float("-inf") for _ in range(n+1)]
+    r = [-1 for _ in range(n + 1)]
+
+    return memoized_cut_rod_aux(p, n, r)
+
+
+def memoized_cut_rod_aux(p, n, r):
+    if r[n] >= 0:
+        return r[n]
+    if n == 0:
+        q = 0
+    else:
+        # q = float("-inf")
+        q = -1
+        for i in range(1, n+1):
+            q = max(q, p[i-1] + memoized_cut_rod_aux(p, n-i, r))
+    r[n] = q
+    return q
+```
+
+ ```python
+When n = 10
+We can get q = 30
+running time t = 3.500000000000031e-05
 ```
