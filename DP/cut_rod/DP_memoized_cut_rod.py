@@ -1,7 +1,6 @@
 def memoized_cut_rod(p, n):
     # r = [float("-inf") for _ in range(n+1)]
     r = [-1 for _ in range(n + 1)]
-
     return memoized_cut_rod_aux(p, n, r)
 
 
@@ -26,4 +25,4 @@ if __name__ == "__main__":
     start = time.clock()
     print('We can get q = %d' % memoized_cut_rod(p, 10))
     end = time.clock()
-    print('running time t = %s' % (end-start))
+    print('running time t = %e' % (end-start))
