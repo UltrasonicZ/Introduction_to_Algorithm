@@ -23,7 +23,7 @@ running time t = 4.360000e-04
 
 ## Top-Down With Memoization
 
-the [DP_memoized_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_memoized_cut_rod.py) implement the recursion of the cut-rod problem
+the [DP_memoized_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_memoized_cut_rod.py) implement the cut-rod problem with memorization
 
  ```python
  def memoized_cut_rod(p, n):
@@ -54,7 +54,7 @@ running time t = 3.600000e-05
 
 ## Bottom-up Method
 
-the [DP_bottom_up_method.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_bottom_up_method.py) implement the recursion of the cut-rod problem
+the [DP_bottom_up_method.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_bottom_up_method.py) implement the cut-rod problem with bottom-up method
 
  ```python
 def bottom_up_cut_rod(p, n):
