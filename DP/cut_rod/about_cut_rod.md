@@ -14,3 +14,9 @@ def cut_rod(p, n):
         q = max(q, p[i-1] + cut_rod(p, n-i))
     return q
 ```
+
+ ```python
+When n = 10
+We can get q = 30
+running time = 0.0004270000000000003
+```
