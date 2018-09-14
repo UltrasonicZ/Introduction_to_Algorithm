@@ -15,5 +15,4 @@ if __name__ == "__main__":
     start = time.clock()
     print('We can get q = %d' % cut_rod(p, 10))
     end = time.clock()
-    print('running time t = %s' % (end-start))
-
+    print('running time t = %e' % (end-start))
