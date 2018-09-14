@@ -74,3 +74,37 @@ When n = 10
 We can get q = 30
 running time t = 2.500000e-05
 ```
+
+## Bottom-up Method with Printing Length
+
+the [DP_extended_bottom_up_cut_rod.py](https://github.com/UltrasonicZ/Introduction-to-Algorithm/blob/master/DP/cut_rod/DP_extended_bottom_up_cut_rod.py) implement the cut-rod problem with bottom-up method printing cut length
+
+ ```python
+def extended_bottom_up_cut_rod(p, n):
+    s, r = [0 for _ in range(n+1)], [-1 for _ in range(n+1)]
+    r[0] = 0
+    for j in range(1, n+1):
+        # q = float("-inf")
+        q = -1
+        for i in range(1, j+1):
+            if q < p[i-1] + r[j-i]:
+                q = p[i-1] + r[j-i]
+                s[j] = i
+        r[j] = q
+    return r, s
+
+
+def print_cut_rod_solution(p, n):
+    r, s = extended_bottom_up_cut_rod(p, n)
+    while n > 0:
+        print(s[n])
+        n = n - s[n]
+```
+
+ ```python
+When n = 10
+We can get q = 30
+running time t = 2.500000e-05
+3
+6
+```
