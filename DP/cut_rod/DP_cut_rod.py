@@ -11,7 +11,9 @@ def cut_rod(p, n):
 if __name__ == "__main__":
     p = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
     import time
+    print('When n = %d' % 10)
     start = time.clock()
-    print(cut_rod(p, 10))
+    print('We can get q = %d' % cut_rod(p, 10))
     end = time.clock()
-    print(end-start)
+    print('running time t = %s' % (end-start))
+
